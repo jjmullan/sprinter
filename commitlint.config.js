@@ -1,6 +1,27 @@
 const Configuration = {
   extends: ["@commitlint/config-conventional"],
   formatter: "@commitlint/format",
+  parserPreset: {
+    //  name: "conventional-changelog-conventionalcommits",
+    presetConfig: {
+      types: [
+        { type: "feat", section: "✨ 기능 추가" },
+        { type: "fix", section: "🐛 버그 수정" },
+        { type: "docs", section: "📝 문서" },
+        { type: "refactor", section: "♻️  리팩토링" },
+        { type: "perf", section: "⚡ 성능 개선" },
+        { type: "revert", section: "⏪ 되돌리기" },
+        { type: "ci", section: "👷 CI", hidden: true },
+        { type: "remove", section: "🗑️  삭제" },
+        { type: "rename", section: "🏷️  이름 변경" },
+        { type: "arch", section: "🏛️  FSD 아키텍처" },
+        { type: "style", section: "💄 스타일", hidden: true },
+        { type: "build", section: "🏗️  빌드 시스템", hidden: true },
+        { type: "test", section: "✅ 테스트", hidden: true },
+        { type: "chore", section: "🔧 기타 작업", hidden: true },
+      ],
+    },
+  },
   rules: {
     // 헤더
     "header-max-length": [2, "always", 72],
