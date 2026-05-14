@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+@import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
+
+/* 기본 테마 */
+:root {
+  /* Default */
+  --black: #343434;
+  --white: #fffefc;
+
+  /* Primary */
+  --main: #4d8064;
+  --sub: #e9d07e;
+}
+
+/* Tailwind CSS 테마 */
+@theme inline {
+  --color-background: var(--black);
+  --color-foreground: var(--white);
+  --font-sans: 'Pretendard Variable', Pretendard, sans-serif;
+}
+
+/* 다크모드 전용 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: #0a0a0a;
+    --white: #ededed;
+  }
+}
+
+/* 기본 스타일 */
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-sans);
+}
