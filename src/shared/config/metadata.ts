@@ -1,3 +1,4 @@
+import { SERVICE_URL } from '@shared/lib/url';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -19,10 +20,10 @@ export const metadata: Metadata = {
   category: 'productivity',
 
   /* OG */
-  // metadataBase: new URL(''),
+  metadataBase: new URL(SERVICE_URL),
   openGraph: {
     type: 'website',
-    // url: 'https://sprinter.app',
+    url: SERVICE_URL,
     siteName: '스프린터',
     title: '스프린터',
     description: '목표를 세우고 매일 달성해나가는 우리들의 성장일지',
@@ -60,11 +61,11 @@ export const metadata: Metadata = {
   },
 
   /* 표준 URL 및 다국어 지원 */
-  // alternates: {
-  //   canonical: 'https://sprinter.app', // 중복 페이지 방지용 표준 URL
-  //   languages: {
-  //     'ko-KR': 'https://sprinter.app/ko',
-  //     'en-US': 'https://sprinter.app/en',
-  //   },
-  // },
+  alternates: {
+    canonical: SERVICE_URL, // 중복 페이지 방지용 표준 URL
+    // languages: {
+    //   'ko-KR': 'https://sprinter.app/ko',
+    //   'en-US': 'https://sprinter.app/en',
+    // },
+  },
 };
