@@ -1,4 +1,4 @@
-import { SERVICE_URL } from '@shared/lib/url';
+import { SERVICE_URL } from '@shared/config/constants/url';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

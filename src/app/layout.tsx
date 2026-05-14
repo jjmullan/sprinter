@@ -1,5 +1,5 @@
-import { metadata } from '@shared/config/metadata';
-import { viewport } from '@shared/config/viewport';
+import { metadata } from '@shared/config/metadata/metadata';
+import { viewport } from '@shared/config/metadata/viewport';
 export { metadata };
 export { viewport };
 import './globals.css';
