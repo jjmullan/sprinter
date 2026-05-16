@@ -1,5 +1,4 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -19,7 +18,11 @@
     "rules": {
       "recommended": true,
       "suspicious": {
-        "noUnknownAtRules": "off"
+        "noUnknownAtRules": "off",
+        "useIterableCallbackReturn": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "error"
       }
     },
     "domains": {
